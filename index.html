@@ -274,6 +274,9 @@
     .history-item-content {
       flex: 1;
       cursor: pointer;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
 
     .history-item-content:hover {
@@ -740,6 +743,24 @@
       .history-sidebar {
         height: 280px;
         margin-top: 1.5rem;
+      }
+
+      /* Fix history items on mobile to prevent text overlap */
+      .history-item {
+        align-items: flex-start;
+        min-height: auto;
+        padding: 0.875rem;
+      }
+
+      .history-item-content {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+      }
+
+      .history-item-actions {
+        align-self: flex-start;
+        margin-top: 0.25rem;
       }
     }
 
